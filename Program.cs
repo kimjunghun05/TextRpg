@@ -9,7 +9,7 @@ namespace TextRpg
             Console.WriteLine("Hello World!");
             Console.WriteLine("Commit test");
             Console.WriteLine("commit test2");
-            Console.WriteLine("");
+            Console.WriteLine("commit test3");
         }
     }
 }
