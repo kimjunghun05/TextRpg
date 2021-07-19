@@ -15,8 +15,8 @@ namespace TextRpg
     {
         static void Main(string[] args)
         {
-            
-
+            Knight knight = new Knight();
+            Lobby lobby = new Lobby(knight);
 
         }
     }

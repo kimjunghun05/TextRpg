@@ -10,6 +10,12 @@ using System.Text;
  * 휴식하러 로비로 가면 체력 완전 회복
  */
 
+/*현재 게임 상태에 따른 게임 진행
+ * gamemode 가 lobby이면 
+ * gamemode 가 map이면
+ * 처음 시작은 lobby
+ */
+
 namespace TextRpg
 {
     class PlayGame
