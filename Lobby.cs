@@ -9,9 +9,15 @@ namespace TextRpg
 {
     class Lobby
     {
- 
+        GameMode mode;
+        
+        public Lobby()
+        {
+            this.mode = GameMode.Lobby;
+        }
         public Character SelectCharacter()
         {
+            Character character;
             string input = Console.ReadLine();
 
             switch (input)
@@ -36,12 +42,10 @@ namespace TextRpg
                 default:
                     return null;
 
-
-
             }
         }
 
-        public Lobby(Character character)
+        public void LobbyProcess(Character character)
         {
             bool isNone;
             if ((int)character.getType() == 0)
@@ -57,7 +61,7 @@ namespace TextRpg
                 Console.WriteLine("2.도적");
                 Console.WriteLine("3.궁수");
                 Console.WriteLine("4.법사");
-                SelectCharacter();
+                character = SelectCharacter();
             }
 
             else
@@ -65,10 +69,9 @@ namespace TextRpg
                 //체력을 회복시켜준다 , 맵을 알려준다
                 Console.WriteLine("체력이 회복되었습니다.");
                 Console.WriteLine("맵을 선택하여주십시오");
-                Console.WriteLine("1.고블린숲");
-                Console.WriteLine("2.오크숲");
-                Console.WriteLine("3.오우거숲");
-
+                Console.WriteLine("1.고블린맵");
+                Console.WriteLine("2.오크맵");
+                Console.WriteLine("3.오우거맵");
             }
         }
         

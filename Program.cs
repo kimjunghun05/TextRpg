@@ -15,8 +15,11 @@ namespace TextRpg
     {
         static void Main(string[] args)
         {
-            Knight knight = new Knight();
-            Lobby lobby = new Lobby(knight);
+            Game game = new Game();
+            while (true)
+            {
+                game.ProcessGame();
+            }
 
         }
     }

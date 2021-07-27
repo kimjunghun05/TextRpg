@@ -20,33 +20,21 @@ public enum CharacterType
 }
 namespace TextRpg
 {
-    public class Character
+    public class Character : Creature
     {
-        protected int hp;
-        protected int attack;
+
         protected CharacterType type;
 
-        public Character(CharacterType type)
+        public Character(CharacterType type) : base(CreatureType.Character)
         {
             this.type = type;
         }
 
-        public int Hp
-        {
-            get { return hp; }
-            set { hp = value; }
-        }
-
+ 
         public CharacterType getType()
          {
             return this.type;
          }
-
-        public void SetInfo(int hp, int attack)
-        {
-            this.hp = hp;
-            this.attack = attack;
-        }
 
  
     }
